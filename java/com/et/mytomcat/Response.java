@@ -31,7 +31,7 @@ public class Response {
             content = FileUtil.getFileContent(path);
         } catch (IOException e) {
             e.printStackTrace();
-            content = e.getMessage();
+            content = "404 Bad Request";
         }
         write(content);
     }
