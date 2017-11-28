@@ -36,6 +36,8 @@ public class Main {
             OutputStream outputStream = socket.getOutputStream();
             String respStr = "<html><title>服务器返回信息到输出流</title><body>" + reqStr + "</body></html>";
             outputStream.write(respStr.getBytes());
+            outputStream.flush();
+            outputStream.close();
         }
     }
 
